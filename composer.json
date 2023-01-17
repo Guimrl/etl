@@ -1,0 +1,26 @@
+{
+    "name": "src/app_etl",
+    "autoload": {
+        "psr-4": {
+            "src\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Guilherme Amaral",
+            "email": "88007295+Guimrl@users.noreply.github.com"
+        }
+    ],
+    "require-dev": {
+        "phan/phan": "^5.4",
+        "squizlabs/php_codesniffer": "^3.7",
+        "phpunit/phpunit": "^9.5"
+    },
+    "scripts": {
+        "start": "php index.php",
+        "web": "php -S localhost:8000"
+    },
+    "config": {
+        "process-timeout": 0
+    }
+}
