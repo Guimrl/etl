@@ -2,19 +2,22 @@
 
 namespace src\extrator;
 
+/**
+ * O formato de entrada de dados é: Nome;cpf;email.
+ */
 class Csv extends Arquivo
 {
     public function lerArquivo(string $caminho): array
     {
 
-            $handle = fopen($caminho, 'r');
+        $handle = fopen($caminho, 'r');
 
-            while (($linha = fgetcsv($handle, 10000, ';')) !== false) {
-                $this->setDados($linha[0], $linha[1], $linha[2]);
-            }
+        while (($linha = fgetcsv($handle, 10000, ';')) !== false) {
+            $this->setDados($linha[0], $linha[1], $linha[2]);
+        }
 
-            fclose($handle);
+        fclose($handle);
 
-            return $this->getDados();
+        return $this->getDados();
     }
 }

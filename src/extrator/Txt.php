@@ -2,6 +2,9 @@
 
 namespace src\extrator;
 
+/**
+ * O formato de entrada de dados é: cpf, nome, email.
+ */
 class Txt extends Arquivo
 {
     public function lerArquivo(string $caminho): array

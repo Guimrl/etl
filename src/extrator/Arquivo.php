@@ -21,5 +21,4 @@ class Arquivo
     {
         return $this->dados;
     }
-
 }
