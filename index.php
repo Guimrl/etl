@@ -5,7 +5,7 @@ require __DIR__ . "/vendor/autoload.php";
 use src\Leitor;
 
 exibeMenu();
-$opcao = readLine("Qual arquivo voce quer ler?\n");
+$opcao = readLine("Qual arquivo voce quer ler?");
 
 if ($opcao == 1) {
     echo "Lendo arquivo de texto...";
@@ -27,7 +27,14 @@ if ($opcao == 1) {
 } elseif ($opcao == 4) {
     echo "Saindo...";
     exit();
-} else {
+} elseif($opcao == 5) {
+    echo "Lendo arquivo xml...";
+    $leitorXML = new leitor();
+    $leitorXML->setDiretorio(__DIR__ . '/arquivos');
+    $leitorXML->setArquivo('dados.xml');
+    $arr_xml = $leitorXML->lerArquivo();
+    print_r($arr_xml); 
+}else {
     echo "comando inválido";
 }
 
@@ -38,4 +45,5 @@ function exibeMenu(): void
     echo "2 - CSV\n";
     echo "3 - TODOS\n";
     echo "4 - SAIR\n";
+    echo "5 - XML\n";
 }
