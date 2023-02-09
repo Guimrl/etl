@@ -13,11 +13,7 @@ class Xml extends Arquivo
 
         while (!feof($handle)) {
             $linha = fgets($handle);
-            $this->setDados(
-                substr($linha, 11, 30),
-                substr($linha, 0, 11),
-                substr($linha, 41, 60)
-            );
+            print_r(strip_tags($linha));
         }
 
         fclose($handle);

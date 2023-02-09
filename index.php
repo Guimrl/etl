@@ -8,33 +8,33 @@ exibeMenu();
 $opcao = readLine("Qual arquivo voce quer ler?");
 
 if ($opcao == 1) {
-    echo "Lendo arquivo de texto...";
+    echo "Lendo arquivo txt... \n";
     $leitorTXT = new Leitor();
     $leitorTXT->setDiretorio(__DIR__ . '/arquivos');
     $leitorTXT->setArquivo('dados.txt');
     $arr_txt = $leitorTXT->lerArquivo();
     print_r($arr_txt);
 } elseif ($opcao == 2) {
-    echo "Lendo arquivo csv...";
+    echo "Lendo arquivo csv... \n";
     $leitorCSV = new leitor();
     $leitorCSV->setDiretorio(__DIR__ . '/arquivos');
     $leitorCSV->setArquivo('dados.csv');
     $arr_csv = $leitorCSV->lerArquivo();
     print_r($arr_csv);
 } elseif ($opcao == 3) {
-    echo "Lendo todos os arquivos...";
-    print_r(array_merge($arr_txt, $arr_csv));
+    echo "Lendo todos os arquivos... \n";
+    print_r(array_merge($arr_txt, $arr_csv, $arr_xml));
 } elseif ($opcao == 4) {
     echo "Saindo...";
     exit();
 } elseif($opcao == 5) {
-    echo "Lendo arquivo xml...";
+    echo "Lendo arquivo xml... \n";
     $leitorXML = new leitor();
     $leitorXML->setDiretorio(__DIR__ . '/arquivos');
     $leitorXML->setArquivo('dados.xml');
     $arr_xml = $leitorXML->lerArquivo();
     print_r($arr_xml); 
-}else {
+} else {
     echo "comando inválido";
 }
 
