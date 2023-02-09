@@ -1,0 +1,15 @@
+<funcionario>
+    <nome>Carlos da Silva</nome>
+    <email>carlos.teste@gmail.com</email>
+    <cpf>049.333.333.32</cpf>
+</funcionario>
+<funcionario>
+    <nome>Fernanda Saldanha</nome>
+    <email>feeeernanda@gmail.com</email>
+    <cpf>039.443.636.02</cpf>
+</funcionario>
+<funcionario>
+    <nome>dionatan cardoso</nome>
+    <email>dionatangremio5@outlook.com</email>
+    <cpf>099.993.933.99</cpf>
+</funcionario>
